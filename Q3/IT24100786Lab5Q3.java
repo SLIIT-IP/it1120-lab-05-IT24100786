@@ -4,23 +4,23 @@ public static void main(String[] args)  {
 
 Scanner input = new Scanner(System.in);
  
-//Declare Variables
+
   int stDate,enDate,dayRes;
   double totAmount;
 
-//Constant values
+
   final double CHARGE = 48000;
   final int DAYS3_4 = 90;
   final int DAYS_5 = 80;
 
-//Get user input
+
 System.out.print("Enter start Date : ");
 stDate = input.nextInt();
 
 System.out.print("Enter the end Date : ");
 enDate = input.nextInt();
 
-//Validate the inputs
+
 
   if (stDate < 1 || stDate > 31 || enDate < 1 || enDate > 31)
    {
@@ -36,11 +36,11 @@ enDate = input.nextInt();
    }
 
 
- //find no of days resered
+
  dayRes = enDate - stDate;  
  
 
- //Calculate the total amount to be paid
+
 
   if (dayRes < 3)
     {
@@ -55,10 +55,10 @@ enDate = input.nextInt();
       totAmount = CHARGE * dayRes * DAYS_5 / 100;
     }
   
-  //Break a line
+  
    System.out.print("\n");  
 
-  //Display the final output
+  
    System.out.println("Room Charge per Day is : " + "RS." + CHARGE);
    System.out.println("Number of Days Reserved : " + dayRes);
    System.out.print("Total Amount to be paid : " + totAmount);
